@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakerz Bite — Where Smiles Are Served Daily</title>
+  <meta name="description" content="Bakerz Bite bakery and cafe single-page eProject website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-strip">
+  <div>Freshly baked every day • Real butter • Real cream • Unbleached flour</div>
+  <div class="visitor">Visitors: <span id="visitorCount">00001</span></div>
+</div>
+
+<header class="site-header">
+  <div class="header-main container-fluid">
+    <button class="icon-btn mobile-menu" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+    <a href="#home" class="brand">
+      <span class="brand-mark">BB</span>
+      <span class="brand-text"><strong>BAKERZ</strong><small>BITE</small></span>
+    </a>
+    <div class="delivery-pill">📍 <span id="deliveryLocation">Delivering across Karachi</span></div>
+    <div class="header-actions">
+      <button class="header-action" onclick="scrollToId('offers')">Offers</button>
+      <button class="icon-btn" onclick="openCart()" aria-label="Cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <button class="icon-btn" onclick="scrollToId('contact')" aria-label="Contact">☎</button>
+    </div>
+  </div>
+
+  <nav class="category-nav" id="categoryNav">
+    <a class="active" href="#home">Home</a>
+    <a href="#cakes">Cakes</a>
+    <a href="#pastries">Pastries</a>
+    <a href="#cookies">Cookies</a>
+    <a href="#pies">Pies</a>
+    <a href="#beverages">Beverages</a>
+    <a href="#desserts">Desserts & Truffles</a>
+    <a href="#merchandise">Merchandise</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<main id="home">
+
+  <!-- OFFER CAROUSEL -->
+  <section class="hero-offers container-fluid">
+    <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button data-bs-target="#offerCarousel" data-bs-slide-to="0" class="active"></button>
+        <button data-bs-target="#offerCarousel" data-bs-slide-to="1"></button>
+        <button data-bs-target="#offerCarousel" data-bs-slide-to="2"></button>
+        <button data-bs-target="#offerCarousel" data-bs-slide-to="3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="offer-slide slide-one">
+            <div class="offer-copy">
+              <span class="eyebrow">LIMITED TIME</span>
+              <h1>Sweet moments,<br><em>freshly baked.</em></h1>
+              <p>Get 20% off selected cakes and dessert boxes this week.</p>
+              <button class="primary-btn" onclick="scrollToId('offers')">Explore Offers →</button>
+            </div>
+            <div class="offer-art"><div class="offer-badge">20%<small>OFF</small></div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="offer-slide slide-two">
+            <div class="offer-copy">
+              <span class="eyebrow">NEW AT BAKERZ BITE</span>
+              <h1>Cookie cups<br><em>with a little dip.</em></h1>
+              <p>Crunchy mini cookies paired with chocolate and caramel dips.</p>
+              <button class="primary-btn" onclick="scrollToId('cookies')">Shop Cookies →</button>
+            </div>
+            <div class="offer-art cookie-art"><div class="cup-label">DIPSIES</div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="offer-slide slide-three">
+            <div class="offer-copy">
+              <span class="eyebrow">WEEKEND SPECIAL</span>
+              <h1>Raise a slice<br><em>to the weekend.</em></h1>
+              <p>Buy any two slices and get a complimentary hot chocolate.</p>
+              <button class="primary-btn" onclick="scrollToId('cakes')">See Cakes →</button>
+            </div>
+            <div class="offer-art cake-art"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="offer-slide slide-four">
+            <div class="offer-copy">
+              <span class="eyebrow">BAKERZ BITE MERCH</span>
+              <h1>Carry a little<br><em>happiness.</em></h1>
+              <p>New mugs, tote bags and serving trays for bakery lovers.</p>
+              <button class="primary-btn" onclick="scrollToId('merchandise')">View Merch →</button>
+            </div>
+            <div class="offer-art merch-art"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" data-bs-target="#offerCarousel" data-bs-slide="prev"><span>‹</span></button>
+      <button class="carousel-control-next" data-bs-target="#offerCarousel" data-bs-slide="next"><span>›</span></button>
+    </div>
+  </section>
+
+  <section class="quick-cats container">
+    <div class="section-heading compact">
+      <span class="eyebrow">SHOP BY CATEGORY</span>
+      <h2>Something for every craving.</h2>
+    </div>
+    <div class="quick-grid">
+      <a href="#cakes">Cakes <span>↗</span></a>
+      <a href="#pastries">Pastries <span>↗</span></a>
+      <a href="#cookies">Cookies <span>↗</span></a>
+      <a href="#pies">Pies <span>↗</span></a>
+      <a href="#beverages">Cold Coffees <span>↗</span></a>
+      <a href="#desserts">Desserts <span>↗</span></a>
+    </div>
+  </section>
+
+  <div id="catalogue"></div>
+
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">DEALS & PROMOS</span>
+        <h2>Little treats, better prices.</h2>
+      </div>
+      <div class="offers-grid">
+        <article class="deal-card dark"><span>MONDAY–THURSDAY</span><h3>20% OFF<br>SELECTED CAKES</h3><p>Use code <b>BAKE20</b> at checkout.</p></article>
+        <article class="deal-card pink"><span>WEEKEND BOX</span><h3>COOKIE<br>DIP BOX</h3><p>12 mini cookies + 2 dips for Rs. 1,199.</p></article>
+        <article class="deal-card blue"><span>CAFÉ COMBO</span><h3>CAKE +<br>COLD COFFEE</h3><p>Any slice with a cold coffee for Rs. 699.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" id="about">
+    <div class="container info-grid">
+      <div>
+        <span class="eyebrow">OUR STORY</span>
+        <h2>Baked with care.<br>Served with a smile.</h2>
+      </div>
+      <div>
+        <p>Bakerz Bite is a modern bakery & café built around one simple promise: premium ingredients, fresh bakes and a warm experience. From artisan pastries to celebration cakes, every item is prepared with care.</p>
+        <p>We use real butter, real cream and unbleached flour because we believe our customers deserve the same quality we would serve our own family.</p>
+        <strong>Our Motto: Where smiles are served daily.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">BAKERZ BITE GALLERY</span>
+        <h2>Fresh from our world.</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Cake">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Croissant">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Cookies">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Cake slice">
+        <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Pie">
+        <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=900&q=85" onclick="openGallery(this.src)" alt="Dessert">
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback-section">
+    <div class="container feedback-grid">
+      <div>
+        <span class="eyebrow">YOUR FEEDBACK</span>
+        <h2>Tell us how we did.</h2>
+        <p>Your feedback helps us make every bake better.</p>
+      </div>
+      <form id="feedbackForm">
+        <input id="feedbackName" placeholder="Your name" required>
+        <div class="stars" id="stars">
+          <button type="button" data-rate="1">★</button><button type="button" data-rate="2">★</button><button type="button" data-rate="3">★</button><button type="button" data-rate="4">★</button><button type="button" data-rate="5">★</button>
+        </div>
+        <textarea id="feedbackText" rows="4" placeholder="Share your experience..." required></textarea>
+        <button class="primary-btn" type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="container faq-grid">
+      <div class="section-heading">
+        <span class="eyebrow">NEED TO KNOW</span>
+        <h2>Frequently asked questions.</h2>
+      </div>
+      <div id="faqList">
+        <button class="faq-item"><span>Do you make custom celebration cakes?</span><b>+</b><p>Yes. Our team can discuss flavours, sizes, themes and inscriptions for special occasions.</p></button>
+        <button class="faq-item"><span>How fresh are the products?</span><b>+</b><p>Our bakery range is prepared fresh in-store every day, subject to availability.</p></button>
+        <button class="faq-item"><span>Can I leave a rating?</span><b>+</b><p>Absolutely. Use the feedback section above to leave a star rating and comment.</p></button>
+        <button class="faq-item"><span>Do you offer merchandise?</span><b>+</b><p>Yes. Bakerz Bite branded mugs, tote bags, glasses and serving trays are available in the Merchandise category.</p></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <span class="eyebrow">COME SAY HELLO</span>
+        <h2>Let’s make your day a little sweeter.</h2>
+      </div>
+      <div class="contact-card">
+        <p><b>Email</b><br>hello@bakerzbite.pk</p>
+        <p><b>Phone</b><br>+92 300 1234567</p>
+        <p><b>Address</b><br>North Nazimabad, Karachi, Pakistan</p>
+        <p><b>Hours</b><br>Daily • 10:00 AM – 11:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sitemap container">
+    <span class="eyebrow">SITE MAP</span>
+    <div class="sitemap-links">
+      <a href="#home">Home</a><a href="#cakes">Cakes</a><a href="#pastries">Pastries</a><a href="#cookies">Cookies</a><a href="#pies">Pies</a><a href="#beverages">Beverages</a><a href="#desserts">Desserts</a><a href="#merchandise">Merchandise</a><a href="#gallery">Gallery</a><a href="#about">About Us</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </div>
+  </section>
+</main>
+
+<div class="ticker"><div id="tickerText">Loading live date, time and location…</div></div>
+
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content product-modal">
+    <button class="modal-close" data-bs-dismiss="modal">×</button>
+    <img id="modalImg" src="" alt="">
+    <div class="modal-body">
+      <span class="eyebrow" id="modalCategory"></span>
+      <h2 id="modalTitle"></h2><div class="modal-price" id="modalPrice"></div>
+      <p id="modalDescription"></p><hr>
+      <h6>INGREDIENTS / SPECIFICATION</h6><p id="modalIngredients"></p>
+      <button class="primary-btn" id="modalAdd">Add to Basket</button>
+    </div>
+  </div></div>
+</div>
+
+<div class="modal fade" id="galleryModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content gallery-modal">
+    <button class="modal-close" data-bs-dismiss="modal">×</button><img id="galleryImg" src="" alt="Gallery image">
+  </div></div>
+</div>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>Your Basket</h3><button onclick="closeCart()">×</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-foot"><strong>Total <span id="cartTotal">Rs. 0</span></strong><button class="primary-btn" onclick="alert('Demo checkout — this eProject does not process real payments.')">Checkout</button></div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="brand footer-brand"><span class="brand-mark">BB</span><span class="brand-text"><strong>BAKERZ</strong><small>BITE</small></span></div><p>Where smiles are served daily.</p></div>
+    <div><h6>SHOP</h6><a href="#cakes">Cakes</a><a href="#pastries">Pastries</a><a href="#cookies">Cookies</a><a href="#pies">Pies</a></div>
+    <div><h6>EXPLORE</h6><a href="#offers">Offers</a><a href="#gallery">Gallery</a><a href="#about">About Us</a><a href="#faq">FAQ</a></div>
+    <div><h6>CONTACT</h6><p>hello@bakerzbite.pk</p><p>+92 300 1234567</p><p>Karachi, Pakistan</p></div>
+  </div>
+  <div class="copyright">© 2026 Bakerz Bite. eProject demonstration website.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
